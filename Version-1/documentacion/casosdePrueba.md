@@ -1,85 +1,104 @@
-# Casos de prueba en base a requisitos
+# Especificación de Casos de Prueba
 
-## 1. Traducción de nombres de posturas de yoga
+## Caso de Prueba 1: Verificar la Traducción Correcta
 
-* **Objetivo:** Verificar que el sistema traduzca correctamente el nombre de una postura de yoga del idioma inglés al sánscrito y español.
+**Descripción:**
+Verificar que el sistema traduzca correctamente el nombre de una postura de yoga del idioma inglés al sánscrito y español.
 
-  * **Resultados Esperados:**
+**Pasos:**
+1. Abrir la aplicación.
+2. Seleccionar una postura de yoga en inglés.
+3. Verificar la traducción en sánscrito y español.
 
-    ![CasoPrueba1](images/cp1.png)
+**Resultado Esperado:**
+La traducción en sánscrito y español es correcta.
 
-  * **Cumple:** ✅
+## Caso de Prueba 2: Ingresar una Postura en Sánscrito
 
-## 2. Ingreso y traducción de posturas en sánscrito
+**Descripción:**
+Confirmar que el sistema permita ingresar una postura de yoga en sánscrito y obtenga su traducción al inglés y español.
 
-* **Objetivo:** Confirmar que el sistema permita ingresar una postura de yoga en sánscrito y obtenga su traducción al inglés y español.
+**Pasos:**
+1. Abrir la aplicación.
+2. Ingresar el nombre de una postura en sánscrito.
+3. Verificar la traducción en inglés y español.
 
-  * **Resultados Esperados:**
+**Resultado Esperado:**
+La traducción en inglés y español es correcta.
 
-    ![CasoPrueba2](images/cp2.png)
+## Caso de Prueba 3: Traducción Precisa del Español al Sánscrito e Inglés
 
-  * **Cumple:** ✅
+**Descripción:**
+Verificar que el sistema traduzca de manera precisa el nombre de una postura de yoga del idioma español al sánscrito e inglés.
 
-## 3. Precisión en la traducción de nombres de posturas
+**Pasos:**
+1. Abrir la aplicación.
+2. Seleccionar una postura de yoga en español.
+3. Verificar la traducción en sánscrito e inglés.
 
-* **Objetivo:** Verificar que el sistema traduzca de manera precisa el nombre de una postura de yoga del idioma español al sánscrito e inglés.
+**Resultado Esperado:**
+La traducción en sánscrito e inglés es precisa.
 
-  * **Resultados Esperados:**
+## Caso de Prueba 4: Visualización Gráfica de Posturas
 
-    ![CasoPrueba3](images/cp3.png)
+**Descripción:**
+Asegurar que el sistema permita visualizar las posturas de yoga de manera gráfica en la interfaz.
 
-  * **Cumple:** ✅
+**Pasos:**
+1. Abrir la aplicación.
+2. Seleccionar una postura de yoga.
+3. Verificar que se muestra una representación gráfica de la postura.
 
-## 4. Visualización gráfica de posturas de yoga
+**Resultado Esperado:**
+La interfaz muestra la postura de yoga de manera gráfica.
 
-* **Objetivo:** Asegurar que el sistema permita visualizar las posturas de yoga de manera gráfica en la interfaz.
+## Caso de Prueba 5: Acceso sin Conexión a Internet
 
-  * **Resultados Esperados:**
+**Descripción:**
+Confirmar que el sistema sea accesible al traductor incluso sin conexión a internet.
 
-    ![CasoPrueba4](images/cp4.png)
+**Pasos:**
+1. Desconectar el dispositivo de internet.
+2. Abrir la aplicación.
+3. Realizar operaciones normales.
 
-  * **Cumple:** ✅
+**Resultado Esperado:**
+La aplicación funciona correctamente incluso sin conexión a internet.
 
-## 5. Accesibilidad sin conexión a internet
+## Caso de Prueba 6: Usabilidad de la Interfaz
 
-* **Objetivo:** Confirmar que el sistema sea accesible al traductor incluso sin conexión a internet.
+**Descripción:**
+Verificar que la interfaz del sistema sea simple y fácil de utilizar.
 
-  * **Resultados Esperados:**
+**Pasos:**
+1. Abrir la aplicación.
+2. Evaluar la facilidad de navegación y comprensión de la interfaz.
 
-    ![CasoPrueba5](images/cp5.png)
+**Resultado Esperado:**
+La interfaz es simple y fácil de utilizar.
 
-  * **Cumple:** ✅
+## Caso de Prueba 7: Autocompletar en la Búsqueda
 
-## 6. Interfaz simple y fácil de utilizar
+**Descripción:**
+Confirmar que el sistema ofrezca la opción de autocompletar mientras se escribe el nombre de la postura.
 
-* **Objetivo:** Verificar que la interfaz del sistema sea simple y fácil de utilizar.
+**Pasos:**
+1. Abrir la aplicación.
+2. Comenzar a escribir el nombre de una postura.
+3. Verificar que se ofrezcan opciones de autocompletar.
 
-  * **Resultados Esperados:**
+**Resultado Esperado:**
+La opción de autocompletar está disponible y funciona correctamente.
 
-    ![CasoPrueba6](images/cp6.png)
+## Caso de Prueba 8: Validación en la Entrada de Texto
 
-    ![CasoPrueba7](images/cp7.png)
+**Descripción:**
+Verificar la validación en la entrada de texto en la pestaña de Diccionario.
 
-  * **Cumple:** ✅
+**Pasos:**
+1. Abrir la pestaña de Diccionario.
+2. Ingresar texto inválido (por ejemplo, números).
+3. Verificar el mensaje de error o la validación.
 
-## 7. Autocompletar durante la entrada del nombre de la postura
-
-* **Objetivo:** Confirmar que el sistema ofrezca la opción de autocompletar mientras se escribe el nombre de la postura.
-
-  * **Resultados Esperados:**
-
-    ![CasoPrueba8](images/cp8.png)
-
-  * **Cumple:** ✅
-
-## 8. Validación en la entrada de texto en la pestaña de Diccionario
-
-* **Objetivo:** Verificar la validación en la entrada de texto en la pestaña de Diccionario.
-
-  * **Resultados Esperados:**
-
-    ![CasoPrueba9](images/cp9.png)
-
-    ![CasoPrueba10](images/cp10.png)
-
-  * **Cumple:** ❌
+**Resultado Esperado:**
+Se muestra un mensaje de error o validación cuando se ingresa texto no válido.
