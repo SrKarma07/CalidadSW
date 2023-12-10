@@ -6,7 +6,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba1](cp1.png)
+    ![CasoPrueba1](images/cp1.png)
 
   * **Cumple:** ✅
 
@@ -16,7 +16,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba2](cp2.png)
+    ![CasoPrueba2](images/cp2.png)
 
   * **Cumple:** ✅
 
@@ -26,7 +26,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba3](cp3.png)
+    ![CasoPrueba3](images/cp3.png)
 
   * **Cumple:** ✅
 
@@ -36,7 +36,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba4](cp4.png)
+    ![CasoPrueba4](images/cp4.png)
 
   * **Cumple:** ✅
 
@@ -46,7 +46,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba5](cp5.png)
+    ![CasoPrueba5](images/cp5.png)
 
   * **Cumple:** ✅
 
@@ -56,9 +56,9 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba6](cp6.png)
+    ![CasoPrueba6](images/cp6.png)
 
-    ![CasoPrueba7](cp7.png)
+    ![CasoPrueba7](images/cp7.png)
 
   * **Cumple:** ✅
 
@@ -68,7 +68,7 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba8](cp8.png)
+    ![CasoPrueba8](images/cp8.png)
 
   * **Cumple:** ✅
 
@@ -78,8 +78,8 @@
 
   * **Resultados Esperados:**
 
-    ![CasoPrueba9](cp9.png)
+    ![CasoPrueba9](images/cp9.png)
 
-    ![CasoPrueba10](cp10.png)
+    ![CasoPrueba10](images/cp10.png)
 
   * **Cumple:** ❌
