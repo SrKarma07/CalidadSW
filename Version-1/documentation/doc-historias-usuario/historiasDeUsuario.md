@@ -1,7 +1,5 @@
 # Historias de Usuario
 
----
-
 ## Historia de Usuario 1: Traducción entre Inglés, Sánscrito y Español
 
 **Descripción:**
