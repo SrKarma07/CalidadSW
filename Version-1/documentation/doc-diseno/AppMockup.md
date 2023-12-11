@@ -1,4 +1,4 @@
-# Esquema del traductor
+# Esquema visual del traductor
 
 ---
 
