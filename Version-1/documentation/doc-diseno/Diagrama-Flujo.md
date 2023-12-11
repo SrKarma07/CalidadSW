@@ -1,6 +1,5 @@
 # Diagrama de Flujo
 
----
 ## Sección de traducciones fijas
 ![Flow chart 1](../images/flowchart_1.jpg)
 Este tiene los siguientes pasos:
