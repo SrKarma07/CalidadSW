@@ -1,7 +1,5 @@
 # Especificación de Casos de Prueba
 
----
-
 ## Caso de Prueba 1: Verificar la Traducción Correcta
 
 **Descripción:**
@@ -24,8 +22,8 @@ Confirmar que el sistema permita ingresar una postura de yoga en sánscrito y ob
 **Pasos:**
 1. Abrir la aplicación.
 2. Dirigirse a la pestaña de Diccionario
-2. Ingresar el nombre de una postura en sánscrito.
-3. Verificar la traducción en inglés y español.
+3. Ingresar el nombre de una postura en sánscrito.
+4. Verificar la traducción en inglés y español.
 
 **Resultado Esperado:**
 La traducción en español es correcta.

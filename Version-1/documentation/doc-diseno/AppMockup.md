@@ -1,7 +1,5 @@
 # Esquema visual del traductor
 
----
-
 ## Sección de traducciones fijas
 ![Mockup_1](../images/mockup-part-1.jpg)
 

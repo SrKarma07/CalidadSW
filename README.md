@@ -1,6 +1,6 @@
 # Traductor de Posturas de Yoga
 
-Este proyecto es un traductor que permite a los usuarios buscar posturas de yoga en sánscrito y obtener su traducción correspondiente en español e inglés. Además, proporciona imágenes para que los usuarios puedan aprender visualmente.
+Este proyecto es un traductor que permite a los usuarios buscar y obtener la traducción de posturas de yoga en 3 idiomas: sánscrito, español e inglés. Además, proporciona imágenes para que los usuarios puedan aprender visualmente.
 
 ## Funcionalidades
 
@@ -17,10 +17,8 @@ El proyecto está desarrollado en Java utilizando IntelliJ IDEA Community Editio
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tuusuario/tuproyecto.git
+   git clone https://github.com/SrKarma07/CalidadSW.git
 
 ## Créditos
 
 Este proyecto fue creado por **CaliTech Pro**.
-
-Agradecemos las contribuciones y el esfuerzo dedicado a hacer de este proyecto una realidad.
