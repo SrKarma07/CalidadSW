@@ -1,7 +1,5 @@
 # Defectos de Calidad del Proyecto
 
----
-
 | Defecto                                  | Descripción | Prioridad |
 |------------------------------------------|-------------|-----------|
 | 1: Falta de Validación Exhaustiva        | La aplicación no realiza una validación exhaustiva en la entrada de texto, lo que podría resultar en la aceptación de datos incorrectos o vacíos. | Media |
