@@ -21,6 +21,6 @@ El proyecto está desarrollado en Java utilizando IntelliJ IDEA Community Editio
 
 ## Créditos
 
-Este proyecto fue creado por **CaliTech**.
+Este proyecto fue creado por **CaliTech Pro**.
 
 Agradecemos las contribuciones y el esfuerzo dedicado a hacer de este proyecto una realidad.
