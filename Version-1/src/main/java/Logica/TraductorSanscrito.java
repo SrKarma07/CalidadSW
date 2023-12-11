@@ -29,7 +29,7 @@ public class TraductorSanscrito {
         diccionario.put("eka pada rajakapotasana", "Postura de la Paloma");
         diccionario.put("urdhva hastasana", "Saludo hacia arriba");
         diccionario.put("parivrtta trikonasana", "Postura del Triángulo Invertido");
-        diccionario.put("parivrtta janu Sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
+        diccionario.put("parivrtta janu sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
 
         diccionario.put("asana", "postura");
         diccionario.put("adho", "abajo");

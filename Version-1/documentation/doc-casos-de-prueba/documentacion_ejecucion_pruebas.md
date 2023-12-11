@@ -1,71 +1,42 @@
 # Documentación de Ejecución de Pruebas
 
+---
+
 ## Resumen de Ejecución
 
-Fecha de Ejecución: [Fecha]
-
 **Resultados Generales:**
-- Total de Casos de Prueba Ejecutados: [Número]
-- Casos de Prueba Exitosos: [Número]
-- Casos de Prueba Fallidos: [Número]
+- Total de Casos de Prueba Ejecutados: 7
+- Casos de Prueba Exitosos: 7
+- Casos de Prueba Fallidos: 0
 
 ## Casos de Prueba
 
 ### Caso de Prueba 1: Verificar Traducción Correcta
-
+![CasoPrueba1](../images/cp1.png)
 **Estado:** Exitoso
-**Observaciones:** [Detalles adicionales, si es necesario]
 
 ### Caso de Prueba 2: Ingresar Postura en Sánscrito
-
-**Estado:** Fallido
-**Observaciones:** [Descripción del defecto encontrado]
-
-**Pasos para Reproducir:**
-1. [Paso 1]
-2. [Paso 2]
-3. [Paso 3]
-
-**Capturas de Pantalla:**
-Adjunta capturas de pantalla relevantes para ilustrar el defecto.
-
-### Caso de Prueba 3: Traducción Precisa del Español
-
+![CasoPrueba2](../images/cp2.png)
 **Estado:** Exitoso
-**Observaciones:** [Detalles adicionales, si es necesario]
 
-## Defectos Encontrados
+### Caso de Prueba 3: Visualización Gráfica de Posturas
+![CasoPrueba3](../images/cp3.png)
+**Estado:** Exitoso
 
-### Defecto 1: Error al Ingresar Postura en Sánscrito
+### Caso de Prueba 4: Acceso sin Conexión a Internet
+![CasoPrueba4](../images/cp4.png)
+**Estado:** Exitoso
 
-**Descripción:**
-Cuando se intenta ingresar una postura en sánscrito, la aplicación no realiza la traducción correctamente.
+### Caso de Prueba 5: Usabilidad de la Interfaz
+![CasoPrueba5](../images/cp5.png)
+**Estado:** Exitoso
 
-**Prioridad:** Alta
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
+### Caso de Prueba 6: Autocompletar en la Búsqueda
+![CasoPrueba6](../images/cp6.png)
+**Estado:** Exitoso
 
-### Defecto 2: [Nombre del Defecto 2]
+### Caso de Prueba 7: Validación en la Entrada de Texto
+![CasoPrueba7](../images/cp7.png)
+**Estado:** Exitoso
 
-**Descripción:**
-[Detalles sobre el segundo defecto encontrado]
 
-**Prioridad:** [Prioridad]
-**Estado:** [Estado actual]
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Recomendaciones
-
-Incluye cualquier recomendación o nota importante relacionada con la ejecución de pruebas.
-
-## Conclusiones
-
-Incluye cualquier conclusión general o información adicional relevante sobre la ejecución de pruebas.
-
----
-
-**Firma del Responsable de Pruebas:**
-[Firma y Nombre]
-
-**Fecha:**
-[Fecha de Firma]

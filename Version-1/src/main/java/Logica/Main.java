@@ -1,6 +1,6 @@
 package Logica;
 
-import vista.JFTraductor;
+import Vista.JFTraductor;
 
 public class Main {
 

@@ -1,71 +1,12 @@
 # Defectos de Calidad del Proyecto
 
-## Defecto 1: Traducción Incorrecta en Modo Offline
-
-**Descripción:**
-Cuando la aplicación se utiliza en modo offline, algunas traducciones no son precisas, especialmente al traducir del inglés al sánscrito.
-
-**Prioridad:** Media
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Defecto 2: Interfaz No Responde en Conexiones Lentas
-
-**Descripción:**
-En conexiones a internet lentas, la interfaz experimenta lentitud y, en algunos casos, deja de responder temporalmente.
-
-**Prioridad:** Alta
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Defecto 3: Problemas de Autocompletado en Navegadores Específicos
-
-**Descripción:**
-La función de autocompletado no funciona correctamente en navegadores específicos, como Internet Explorer.
-
-**Prioridad:** Baja
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Defecto 4: Imágenes Incorrectas Asociadas a Algunas Posturas
-
-**Descripción:**
-En algunas posturas, las imágenes asociadas no son correctas o no son representativas de la postura.
-
-**Prioridad:** Media
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Defecto 5: Problemas de Usabilidad en Dispositivos Móviles
-
-**Descripción:**
-La aplicación presenta problemas de usabilidad en dispositivos móviles, como la falta de capacidad de respuesta en ciertos tamaños de pantalla.
-
-**Prioridad:** Alta
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-## Defecto 6: Mensajes de Error No Informativos
-
-**Descripción:**
-Los mensajes de error generados por la aplicación no son lo suficientemente descriptivos, dificultando la identificación y corrección de problemas.
-
-**Prioridad:** Media
-**Estado:** Pendiente
-**Asignado a:** [Nombre del Asignado, si aplica]
-
-# Recomendaciones
-
-Incluye cualquier recomendación o nota importante relacionada con los defectos identificados.
-
-# Conclusiones
-
-Incluye cualquier conclusión general o información adicional relevante sobre los defectos de calidad identificados.
-
 ---
 
-**Firma del Responsable de Calidad:**
-[Firma y Nombre]
+| Defecto                                  | Descripción | Prioridad |
+|------------------------------------------|-------------|-----------|
+| 1: Falta de Validación Exhaustiva        | La aplicación no realiza una validación exhaustiva en la entrada de texto, lo que podría resultar en la aceptación de datos incorrectos o vacíos. | Media |
+| 2: Ausencia de Pruebas Unitarias | El código carece de pruebas unitarias adecuadas para verificar la funcionalidad de unidades específicas. | Alta |
+| 3: Falta de Internacionalización | El código no implementa técnicas de internacionalización para admitir múltiples idiomas. | Baja |
+| 4: Carencia de Comentarios       | El código carece de comentarios adecuados para explicar el propósito de las secciones críticas, decisiones de diseño, o detalles complejos de implementación. | Media |
 
-**Fecha:**
-[Fecha de Firma]
+
