@@ -7,29 +7,29 @@ import java.util.StringTokenizer;
 
 public class TraductorSanscrito {
 
-    private static final Map<String, String> diccionario = new HashMap<>();
+    public static final Map<String, String> diccionario = new HashMap<>();
 
     static {
-        diccionario.put("tadasana", "Postura de la Montaña");
         diccionario.put("adho mukha svanasana", "Perro mirando hacia abajo");
-        diccionario.put("virabhadrasana i", "Guerrero I");
-        diccionario.put("virabhadrasana ii", "Guerrero II");
-        diccionario.put("vrikshasana", "Postura del Árbol");
-        diccionario.put("balasana", "Postura del Niño");
         diccionario.put("ardha bhujangasana", "Postura de la Cobra a la mitad");
+        diccionario.put("balasana", "Postura del Niño");
+        diccionario.put("eka pada rajakapotasana", "Postura de la Paloma");
+        diccionario.put("kumbhakasana", "Postura de la Plancha");
+        diccionario.put("malasana", "Postura de la Guirnalda");
+        diccionario.put("matsyasana", "Postura del Pez");
+        diccionario.put("parivrtta janu Sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
+        diccionario.put("parivrtta trikonasana", "Postura del Triángulo Invertido");
         diccionario.put("paschimottanasana", "Flexión hacia adelante sentado");
         diccionario.put("setu bandhasana", "Postura del Puente");
         diccionario.put("shavasana", "Postura del Cadáver");
+        diccionario.put("tadasana", "Postura de la Montaña");
         diccionario.put("trikonasana", "Postura del Triángulo");
-        diccionario.put("kumbhakasana", "Postura de la Plancha");
-        diccionario.put("urdhva mukha svanasana", "Perro mirando hacia arriba");
-        diccionario.put("matsyasana", "Postura del Pez");
         diccionario.put("utkatasana", "Postura de la Silla");
-        diccionario.put("malasana", "Postura de la Guirnalda");
-        diccionario.put("eka pada rajakapotasana", "Postura de la Paloma");
         diccionario.put("urdhva hastasana", "Saludo hacia arriba");
-        diccionario.put("parivrtta trikonasana", "Postura del Triángulo Invertido");
-        diccionario.put("parivrtta janu sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
+        diccionario.put("urdhva mukha svanasana", "Perro mirando hacia arriba");
+        diccionario.put("virabhadrasana i", "Guerrero I");
+        diccionario.put("virabhadrasana ii", "Guerrero II");
+        diccionario.put("vrikshasana", "Postura del Árbol");
 
         diccionario.put("asana", "postura");
         diccionario.put("adho", "abajo");
@@ -71,7 +71,7 @@ public class TraductorSanscrito {
         if (traduccionCompuesta != null) {
             return traduccionCompuesta;
         }
-        return "No se encontró traducción";
+        return null;
     }
 
     private String traduccionCompuesta(String palabraSanskrita) {
