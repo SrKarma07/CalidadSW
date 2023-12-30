@@ -629,7 +629,7 @@ public class JFTraductor extends javax.swing.JFrame {
         };
 
         // Obtener la ruta del paquete "Images"
-        Path rutaBase = Paths.get("src", "main", "java", "Images");
+        Path rutaBase = Paths.get("Version-1","src", "main", "java", "Images");
 
         // Agregar las imágenes al mapa
         for (int i = 0; i < nombresArchivos.length; i++) {
