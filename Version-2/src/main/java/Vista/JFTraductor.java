@@ -138,7 +138,7 @@ public class JFTraductor extends javax.swing.JFrame {
                 cbSanskritActionPerformed(evt);
             }
         });
-        jpSanskrit.add(cbSanskrit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 200, -1));
+        jpSanskrit.add(cbSanskrit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 190, -1));
 
         tabPanel.addTab("Sanskrit", jpSanskrit);
 
@@ -153,7 +153,7 @@ public class JFTraductor extends javax.swing.JFrame {
                 cbEspanolActionPerformed(evt);
             }
         });
-        jpEspanol.add(cbEspanol, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jpEspanol.add(cbEspanol, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 290, -1));
 
         lblImagen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jpEspanol.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 293, 219));
@@ -188,7 +188,7 @@ public class JFTraductor extends javax.swing.JFrame {
                 cbEnglishActionPerformed(evt);
             }
         });
-        jpEnglish.add(cbEnglish, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 293, -1));
+        jpEnglish.add(cbEnglish, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 210, -1));
 
         lblImagenEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jpEnglish.add(lblImagenEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 293, 219));
