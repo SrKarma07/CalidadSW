@@ -249,7 +249,7 @@ public class JFTraductor extends javax.swing.JFrame {
         jtaTraducido.setLineWrap(true);
         jtaTraducido.setRows(5);
         jtaTraducido.setAutoscrolls(false);
-        jtaTraducido.setDisabledTextColor(new java.awt.Color(242, 242, 242));
+        jtaTraducido.setDisabledTextColor(new java.awt.Color(0, 0, 0));
         jtaTraducido.setEnabled(false);
         jtaTraducido.setFocusable(false);
         jtaTraducido.setSelectedTextColor(new java.awt.Color(204, 204, 204));
