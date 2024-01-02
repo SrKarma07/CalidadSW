@@ -530,7 +530,11 @@ public class JFTraductor extends javax.swing.JFrame {
             }
         });*/
     }
-
+    private String obtenerRutaAudio(String traduccionSanskrito) {
+        // Construir la ruta del archivo de audio basada en la traducción del Sanscrito
+        String audioFileName = traduccionSanskrito.toLowerCase().replaceAll("\\s+", "") + ".wav";
+        return Paths.get("Version-2", "src", "main", "java", "Sounds", audioFileName).toString();
+    }
     private void manejarAccionSonido(String accion) {
         switch (accion) {
             case "PLAY":
