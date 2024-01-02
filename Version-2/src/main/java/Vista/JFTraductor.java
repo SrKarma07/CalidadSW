@@ -1,7 +1,7 @@
 package Vista;
 
 import Logica.TraductorSanscrito;
-import java.awt.Color;
+
 import java.awt.Image;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,9 +14,11 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
+
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+import javax.sound.sampled.*;
+import java.io.File;
+import java.io.IOException;
 
 public class JFTraductor extends javax.swing.JFrame {
 
@@ -25,6 +27,9 @@ public class JFTraductor extends javax.swing.JFrame {
     private final Map<Integer, String> spanish;
     private final Map<Integer, String> sanskrit;
     TraductorSanscrito ts;
+
+    private Clip clip;
+    private boolean isPlaying = false;
 
     public JFTraductor() {
         setTitle("Yoga Translate");
@@ -42,6 +47,10 @@ public class JFTraductor extends javax.swing.JFrame {
         // Cargar imágenes al inicio
         cargarImagenes();
         mostrarImagenSeleccionada();
+
+        //Cargar el audio
+        inicializarSonido();
+
     }
     
 
@@ -60,6 +69,9 @@ public class JFTraductor extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         cbSanskrit = new javax.swing.JComboBox<>();
+        jBPlaySpanishInTABSan = new javax.swing.JButton();
+        jBPlayEnglishInTABSan = new javax.swing.JButton();
+        jBPause = new javax.swing.JButton();
         jpEspanol = new javax.swing.JPanel();
         cbEspanol = new javax.swing.JComboBox<>();
         lblImagen = new javax.swing.JLabel();
@@ -139,6 +151,31 @@ public class JFTraductor extends javax.swing.JFrame {
             }
         });
         jpSanskrit.add(cbSanskrit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 190, -1));
+
+        jBPlaySpanishInTABSan.setText("PLAY");
+        jBPlaySpanishInTABSan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPlaySpanishInTABSanActionPerformed(evt);
+            }
+        });
+        jpSanskrit.add(jBPlaySpanishInTABSan, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
+
+        jBPause.setText("PAUSE");
+        jBPause.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPauseActionPerformed(evt);
+            }
+        });
+        jpSanskrit.add(jBPause, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
+
+        jBPlayEnglishInTABSan.setText("PLAY");
+        jBPlayEnglishInTABSan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBPlayEnglishInTABSanActionPerformed(evt);
+            }
+        });
+
+        jpSanskrit.add(jBPlayEnglishInTABSan, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, -1, -1));
 
         tabPanel.addTab("Sanskrit", jpSanskrit);
 
@@ -340,10 +377,24 @@ public class JFTraductor extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jtaSanscritoKeyTyped
 
+    private void jBPlaySpanishInTABSanActionPerformed(java.awt.event.ActionEvent evt) {
+        playPause();
+    }
+    private void jBPlayEnglishInTABSanActionPerformed(java.awt.event.ActionEvent evt) {
+        playPause();
+    }
+
+    private void jBPauseActionPerformed(java.awt.event.ActionEvent evt) {
+        pause();
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbEnglish;
     private javax.swing.JComboBox<String> cbEspanol;
     private javax.swing.JComboBox<String> cbSanskrit;
+    private javax.swing.JButton jBPause;
+    private javax.swing.JButton jBPlaySpanishInTABSan;
+    private javax.swing.JButton jBPlayEnglishInTABSan;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -455,7 +506,77 @@ public class JFTraductor extends javax.swing.JFrame {
         cargarMapaIdioma(sanskrit, sanskritWords);
 
     }
+    private void inicializarSonido() {
+        try {
+            File file = new File("Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav");
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(audioStream);
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+        /*
+        clip.addLineListener(new LineListener() {
 
+            @Override
+            public void update(LineEvent event) {
+                if (event.getType() == LineEvent.Type.STOP) {
+                    // Reproducir de nuevo cuando se detiene (repetición)
+                    if (isPlaying) {
+                        clip.setMicrosecondPosition(0);
+                        clip.start();
+                    }
+                }
+            }
+        });*/
+    }
+
+    private void manejarAccionSonido(String accion) {
+        switch (accion) {
+            case "PLAY":
+                if (!isPlaying) {
+                    clip.start();
+                    isPlaying = true;
+                }
+                break;
+            case "PAUSE":
+                if (isPlaying) {
+                    clip.stop();
+                    isPlaying = false;
+                }
+                break;
+            case "RESET":
+                clip.setMicrosecondPosition(0);
+                break;
+            case "STOP":
+                clip.close();
+                isPlaying = false;
+                break;
+            default:
+                System.out.println("Not a valid response");
+        }
+    }
+
+    private void playPause() {
+        if (!isPlaying) {
+            // Reproducir si no está reproduciendo
+            clip.start();
+            isPlaying = true;
+        } else {
+            // Pausar si está reproduciendo
+            clip.setMicrosecondPosition(0); // Reiniciar la posición al inicio
+            clip.start();
+            isPlaying = true;
+        }
+    }
+
+    private void pause() {
+        // Pausar la reproducción
+        if (isPlaying) {
+            clip.stop();
+            isPlaying = false;
+        }
+    }
     private void cargarMapaIdioma(Map<Integer, String> mapa, String[] palabras) {
         for (int i = 0; i < palabras.length; i++) {
             mapa.put(i, palabras[i]);

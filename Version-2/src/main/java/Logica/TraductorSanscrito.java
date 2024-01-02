@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+
+
 public class TraductorSanscrito {
 
     public static final Map<String, String> DICCIONARIO = new HashMap<>();
