@@ -1,23 +1,45 @@
 package Vista;
 
 import Logica.TraductorSanscrito;
+<<<<<<< HEAD
 import java.awt.Image;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+=======
+import java.awt.Color;
+import java.awt.Image;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Collections;
+>>>>>>> origin/dev-joel
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+<<<<<<< HEAD
+=======
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+>>>>>>> origin/dev-joel
 import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
 
 public class JFTraductor extends javax.swing.JFrame {
 
+<<<<<<< HEAD
     private Map<Integer, ImageIcon> mapaImagenes;
     private Map<Integer, String> english;
     private Map<Integer, String> spanish;
     private Map<Integer, String> sanskrit;
+=======
+    private final Map<Integer, ImageIcon> mapaImagenes;
+    private final Map<Integer, String> english;
+    private final Map<Integer, String> spanish;
+    private final Map<Integer, String> sanskrit;
+>>>>>>> origin/dev-joel
     TraductorSanscrito ts;
 
     public JFTraductor() {
@@ -35,10 +57,17 @@ public class JFTraductor extends javax.swing.JFrame {
 
         // Cargar imágenes al inicio
         cargarImagenes();
+<<<<<<< HEAD
 
         // Mostrar la imagen seleccionada al inicio
         mostrarImagenSeleccionada();
     }
+=======
+        mostrarImagenSeleccionada();
+    }
+    
+
+>>>>>>> origin/dev-joel
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -46,6 +75,7 @@ public class JFTraductor extends javax.swing.JFrame {
 
         jLabel2 = new javax.swing.JLabel();
         tabPanel = new javax.swing.JTabbedPane();
+<<<<<<< HEAD
         jpEspanol = new javax.swing.JPanel();
         cbEspanol = new javax.swing.JComboBox<>();
         lblImagen = new javax.swing.JLabel();
@@ -62,6 +92,8 @@ public class JFTraductor extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+=======
+>>>>>>> origin/dev-joel
         jpSanskrit = new javax.swing.JPanel();
         lblImagenSANS = new javax.swing.JLabel();
         lblSANS_ES = new javax.swing.JLabel();
@@ -70,6 +102,25 @@ public class JFTraductor extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         cbSanskrit = new javax.swing.JComboBox<>();
+<<<<<<< HEAD
+=======
+        jpEspanol = new javax.swing.JPanel();
+        cbEspanol = new javax.swing.JComboBox<>();
+        lblImagen = new javax.swing.JLabel();
+        lblES_EN = new javax.swing.JLabel();
+        lblES_SANS = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jpEnglish = new javax.swing.JPanel();
+        cbEnglish = new javax.swing.JComboBox<>();
+        lblImagenEN = new javax.swing.JLabel();
+        lblEN_ES = new javax.swing.JLabel();
+        lblEN_SANS = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
+>>>>>>> origin/dev-joel
         jPanel1 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -81,18 +132,35 @@ public class JFTraductor extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Traductor");
+<<<<<<< HEAD
         setResizable(false);
 
         jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("TRADUCTOR");
 
+=======
+        setBackground(new java.awt.Color(255, 255, 255));
+        setBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        setResizable(false);
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("TRADUCTOR");
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, java.awt.BorderLayout.CENTER);
+
+        tabPanel.setBackground(new java.awt.Color(255, 255, 255));
+        tabPanel.setOpaque(true);
+>>>>>>> origin/dev-joel
         tabPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tabPanelMouseClicked(evt);
             }
         });
 
+<<<<<<< HEAD
         cbEspanol.setEditable(true);
         cbEspanol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbEspanol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Postura de la Montaña", "Perro mirando hacia abajo", "Guerrero I", "Guerrero II", "Postura del Árbol", "Postura del Niño", "Postura de la Cobra a la mitad", "Flexión hacia adelante sentado", "Postura del Puente", "Postura del Cadáver", "Postura del Triángulo", "Postura de la Plancha", "Perro mirando hacia arriba", "Postura del Pez", "Postura de la Silla", "Postura de la Guirnalda", "Postura de la Paloma", "Saludo hacia arriba", "Postura del Triángulo Invertido", "Postura de la Cabeza a la Rodilla Invertida" }));
@@ -254,11 +322,41 @@ public class JFTraductor extends javax.swing.JFrame {
         cbSanskrit.setEditable(true);
         cbSanskrit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         cbSanskrit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select     ", "Tadasana", "Adho Mukha Svanasana", "Virabhadrasana I", "Virabhadrasana II", "Vrikshasana", "Balasana", "Ardha Bhujangasana", "Paschimottanasana", "Setu Bandhasana", "Shavasana", "Trikonasana", "Kumbhakasana", "Urdhva Mukha Svanasana", "Matsyasana", "Utkatasana", "Malasana", "Eka Pada Rajakapotasana", "Urdhva Hastasana", "Parivrtta Trikonasana", "Parivrtta Janu Sirsasana" }));
+=======
+        jpSanskrit.setBackground(new java.awt.Color(255, 255, 255));
+        jpSanskrit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jpSanskrit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblImagenSANS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jpSanskrit.add(lblImagenSANS, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 293, 219));
+
+        lblSANS_ES.setText("...");
+        jpSanskrit.add(lblSANS_ES, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 180, -1));
+
+        lblSANS_EN.setText("...");
+        jpSanskrit.add(lblSANS_EN, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 181, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setText("Español: ");
+        jpSanskrit.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setText("English: ");
+        jpSanskrit.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, -1, -1));
+
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        jpSanskrit.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 157, 310, 10));
+
+        cbSanskrit.setEditable(true);
+        cbSanskrit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbSanskrit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Adho Mukha Svanasana", "Ardha Bhujangasana", "Balasana", "Eka Pada Rajakapotasana", "Kumbhakasana", "Malasana", "Matsyasana", "Parivrtta Janu Sirsasana", "Parivrtta Trikonasana", "Paschimottanasana", "Setu Bandhasana", "Shavasana", "Tadasana", "Trikonasana", "Urdhva Hastasana", "Urdhva Mukha Svanasana", "Utkatasana", "Vrikshasana", "Virabhadrasana I", "Virabhadrasana II" }));
+>>>>>>> origin/dev-joel
         cbSanskrit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbSanskritActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         javax.swing.GroupLayout jpSanskritLayout = new javax.swing.GroupLayout(jpSanskrit);
         jpSanskrit.setLayout(jpSanskritLayout);
@@ -311,14 +409,107 @@ public class JFTraductor extends javax.swing.JFrame {
 
         tabPanel.addTab("Sanskrit", jpSanskrit);
 
+=======
+        jpSanskrit.add(cbSanskrit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 190, -1));
+
+        tabPanel.addTab("Sanskrit", jpSanskrit);
+
+        jpEspanol.setBackground(new java.awt.Color(255, 255, 255));
+        jpEspanol.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cbEspanol.setEditable(true);
+        cbEspanol.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbEspanol.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Guerrero I", "Guerrero II", "Perro mirando hacia abajo", "Perro mirando hacia arriba", "Flexión hacia adelante sentado", "Postura de la Cabeza a la Rodilla Invertida", "Postura de la Cobra a la mitad", "Postura de la Guirnalda", "Postura de la Montaña", "Postura de la Paloma", "Postura de la Plancha", "Postura de la Silla", "Postura de la Triángulo", "Postura de la Triángulo Invertido", "Postura de la Montaña", "Postura de la Cobra a la mitad", "Postura de la Paloma", "Postura de la Plancha", "Postura de la Silla", "Postura del Árbol", "Postura del Cadáver", "Postura del Niño", "Postura del Pez", "Postura del Puente", "Saludo hacia arriba" }));
+        cbEspanol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEspanolActionPerformed(evt);
+            }
+        });
+        jpEspanol.add(cbEspanol, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 290, -1));
+
+        lblImagen.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpEspanol.add(lblImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 293, 219));
+
+        lblES_EN.setText("...");
+        jpEspanol.add(lblES_EN, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 167, -1));
+
+        lblES_SANS.setText("...");
+        jpEspanol.add(lblES_SANS, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 163, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setText("Inglés:");
+        jpEspanol.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setText("Sánscrito: ");
+        jpEspanol.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 213, -1, -1));
+
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        jpEspanol.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 157, 310, 10));
+
+        tabPanel.addTab("Español", jpEspanol);
+
+        jpEnglish.setBackground(new java.awt.Color(255, 255, 255));
+        jpEnglish.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cbEnglish.setEditable(true);
+        cbEnglish.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cbEnglish.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Chair Pose", "Child's Pose", "Corpse Pose", "Downward-Facing Dog", "Fish Pose", "Garland Pose", "Half Cobra Pose", "Mountain Pose", "Pigeon Pose", "Plank Pose", "Revolved Head To Knee Pose", "Revolved Triangle Pose", "Seated Forward Bend", "Select", "Triangle Pose", "Tree Pose", "Upward Salute", "Upward-Facing Dog", "Warrior I", "Warrior II" }));
+        cbEnglish.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEnglishActionPerformed(evt);
+            }
+        });
+        jpEnglish.add(cbEnglish, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 210, -1));
+
+        lblImagenEN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpEnglish.add(lblImagenEN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 293, 219));
+
+        lblEN_ES.setText("...");
+        jpEnglish.add(lblEN_ES, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 180, -1));
+
+        lblEN_SANS.setText("...");
+        jpEnglish.add(lblEN_SANS, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 181, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setText("Spanish: ");
+        jpEnglish.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 100, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setText("Sanskrit");
+        jpEnglish.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, -1, -1));
+
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        jpEnglish.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 157, 310, 10));
+
+        tabPanel.addTab("English", jpEnglish);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+>>>>>>> origin/dev-joel
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Sánscrito");
+<<<<<<< HEAD
 
         jtaSanscrito.setColumns(20);
         jtaSanscrito.setLineWrap(true);
         jtaSanscrito.setRows(5);
+=======
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 70, 250, -1));
+
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+
+        jtaSanscrito.setBackground(new java.awt.Color(242, 242, 242));
+        jtaSanscrito.setColumns(20);
+        jtaSanscrito.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtaSanscrito.setLineWrap(true);
+        jtaSanscrito.setRows(5);
+        jtaSanscrito.setAutoscrolls(false);
+>>>>>>> origin/dev-joel
         jtaSanscrito.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtaSanscritoKeyTyped(evt);
@@ -326,6 +517,7 @@ public class JFTraductor extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jtaSanscrito);
 
+<<<<<<< HEAD
         jtaTraducido.setEditable(false);
         jtaTraducido.setBackground(new java.awt.Color(255, 255, 255));
         jtaTraducido.setColumns(20);
@@ -338,11 +530,45 @@ public class JFTraductor extends javax.swing.JFrame {
         jLabel9.setText("Traducción");
 
         jButton1.setText("Traducir");
+=======
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 110, -1, 80));
+
+        jScrollPane2.setBackground(new java.awt.Color(242, 242, 242));
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane2.setEnabled(false);
+
+        jtaTraducido.setColumns(20);
+        jtaTraducido.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jtaTraducido.setLineWrap(true);
+        jtaTraducido.setRows(5);
+        jtaTraducido.setAutoscrolls(false);
+        jtaTraducido.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jtaTraducido.setEnabled(false);
+        jtaTraducido.setFocusable(false);
+        jtaTraducido.setSelectedTextColor(new java.awt.Color(204, 204, 204));
+        jScrollPane2.setViewportView(jtaTraducido);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, 80));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Traducción");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 250, -1));
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Traducir");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusable(false);
+>>>>>>> origin/dev-joel
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -402,6 +628,13 @@ public class JFTraductor extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(tabPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
+=======
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 130, -1, -1));
+
+        tabPanel.addTab("Diccionario", jPanel1);
+
+        getContentPane().add(tabPanel, java.awt.BorderLayout.PAGE_END);
+>>>>>>> origin/dev-joel
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -431,8 +664,26 @@ public class JFTraductor extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ts = new TraductorSanscrito();
+<<<<<<< HEAD
         String traducir = ts.traducir(jtaSanscrito.getText().toLowerCase().trim());
         jtaTraducido.setText(traducir);
+=======
+        String textoSanscrito = jtaSanscrito.getText().toLowerCase().trim();
+
+        if (textoSanscrito.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El campo está vacío. Por favor, ingresa texto antes de traducir.", "Campo Vacío", JOptionPane.WARNING_MESSAGE);
+        } else {
+            String traducir = ts.traducir(textoSanscrito);
+
+            if (traducir.isBlank()) {
+                JOptionPane.showMessageDialog(this, "No se pudo traducir la palabra. No se encuentra en el diccionario.", "Error de Traducción", JOptionPane.ERROR_MESSAGE);
+            } else {
+                jtaTraducido.setText(traducir);
+            }
+        }
+
+
+>>>>>>> origin/dev-joel
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jtaSanscritoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtaSanscritoKeyTyped
@@ -468,9 +719,15 @@ public class JFTraductor extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+<<<<<<< HEAD
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+=======
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+>>>>>>> origin/dev-joel
     private javax.swing.JPanel jpEnglish;
     private javax.swing.JPanel jpEspanol;
     private javax.swing.JPanel jpSanskrit;
@@ -490,7 +747,11 @@ public class JFTraductor extends javax.swing.JFrame {
 
     private void cargarIdioma(int tab) {
         String[] englishWords = {
+<<<<<<< HEAD
             "...",
+=======
+            "Select",
+>>>>>>> origin/dev-joel
             "Mountain Pose",
             "Downward-Facing Dog",
             "Warrior I",
@@ -514,7 +775,11 @@ public class JFTraductor extends javax.swing.JFrame {
 
         };
         String[] spanishWords = {
+<<<<<<< HEAD
             "...",
+=======
+            "Seleccione",
+>>>>>>> origin/dev-joel
             "Postura de la Montaña",
             "Perro mirando hacia abajo",
             "Guerrero I",
@@ -538,7 +803,11 @@ public class JFTraductor extends javax.swing.JFrame {
         };
 
         String[] sanskritWords = {
+<<<<<<< HEAD
             "...",
+=======
+            "Select",
+>>>>>>> origin/dev-joel
             "Tadasana",
             "Adho Mukha Svanasana",
             "Virabhadrasana I",
@@ -559,6 +828,7 @@ public class JFTraductor extends javax.swing.JFrame {
             "Urdhva Hastasana",
             "Parivrtta Trikonasana",
             "Parivrtta Janu Sirsasana"
+<<<<<<< HEAD
 
         };
 
@@ -602,6 +872,23 @@ public class JFTraductor extends javax.swing.JFrame {
 
     }
 
+=======
+        };
+
+        cargarMapaIdioma(english, englishWords);
+        cargarMapaIdioma(spanish, spanishWords);
+        cargarMapaIdioma(sanskrit, sanskritWords);
+
+    }
+
+    private void cargarMapaIdioma(Map<Integer, String> mapa, String[] palabras) {
+        for (int i = 0; i < palabras.length; i++) {
+            mapa.put(i, palabras[i]);
+        }
+        System.out.println("Mapeo de la lista: " + mapa);
+    }
+
+>>>>>>> origin/dev-joel
     private void cargarImagenes() {
         // Rutas de las imágenes en el paquete "Images"
         String[] nombresArchivos = {
@@ -629,13 +916,18 @@ public class JFTraductor extends javax.swing.JFrame {
         };
 
         // Obtener la ruta del paquete "Images"
+<<<<<<< HEAD
         Path rutaBase = Paths.get("Version-1","src", "main", "java", "Images");
+=======
+        Path rutaBase = Paths.get("Version-2", "src", "main", "java", "Images");
+>>>>>>> origin/dev-joel
 
         // Agregar las imágenes al mapa
         for (int i = 0; i < nombresArchivos.length; i++) {
             Path rutaImagen = rutaBase.resolve(nombresArchivos[i]);
             mapaImagenes.put(i, new ImageIcon(rutaImagen.toString()));
         }
+<<<<<<< HEAD
     }
 
     private void mostrarImagenSeleccionada() {
@@ -692,10 +984,36 @@ public class JFTraductor extends javax.swing.JFrame {
                 }
             }
             default -> {
+=======
+
+    }
+
+    private void mostrarImagenSeleccionada() {
+        int tab = tabPanel.getSelectedIndex();
+        int indiceSeleccionado = -1;
+        Map<Integer, String> idioma = new HashMap<>();
+
+        switch (tab) {
+            case 1 -> {
+                idioma = spanish;
+                indiceSeleccionado = buscarClavePorValor(idioma, cbEspanol.getSelectedItem());
+                mostrarImagen(lblImagen, indiceSeleccionado == -1 ? 0 : indiceSeleccionado);
+            }
+            case 2 -> {
+                idioma = english;
+                indiceSeleccionado = buscarClavePorValor(idioma, cbEnglish.getSelectedItem());
+                mostrarImagen(lblImagenEN, indiceSeleccionado == -1 ? 0 : indiceSeleccionado);
+            }
+            case 0 -> {
+                idioma = sanskrit;
+                indiceSeleccionado = buscarClavePorValor(idioma, cbSanskrit.getSelectedItem());
+                mostrarImagen(lblImagenSANS, indiceSeleccionado == -1 ? 0 : indiceSeleccionado);
+>>>>>>> origin/dev-joel
             }
         }
     }
 
+<<<<<<< HEAD
     private void mostrarTextoSeleccionado() {
         cargarIdioma(tabPanel.getSelectedIndex());
 
@@ -721,4 +1039,87 @@ public class JFTraductor extends javax.swing.JFrame {
 
     }
 
+=======
+    private void mostrarImagen(JLabel label, int indiceSeleccionado) {
+        ImageIcon imagenSeleccionada = mapaImagenes.get(indiceSeleccionado);
+        System.out.println("Ruta de la imagen: " + imagenSeleccionada);
+
+        if (imagenSeleccionada != null) {
+            Icon icon = new ImageIcon(imagenSeleccionada.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT));
+            System.out.println("Tamaño del Icon: " + icon.getIconWidth() + " x " + icon.getIconHeight());
+            System.out.println("Dimensiones del JLabel: " + label.getWidth() + " x " + label.getHeight());
+            label.setIcon(icon);
+            label.setText("");
+        } else {
+            label.setIcon(null);
+            label.setText("Imagen NO Encontrada :c");
+        }
+    }
+
+    private void mostrarTextoSeleccionado() {
+        cargarIdioma(tabPanel.getSelectedIndex());
+
+        Object opcionSelec = getSelectedItemByIndex(tabPanel.getSelectedIndex());
+        int indiceSeleccionado = buscarClavePorValor(getIdiomaMap(tabPanel.getSelectedIndex()), opcionSelec.toString());
+
+        switch (tabPanel.getSelectedIndex()) {
+            case 1 ->
+                mostrarTexto(lblES_EN, lblES_SANS, english, sanskrit, opcionSelec, indiceSeleccionado);
+            case 2 ->
+                mostrarTexto(lblEN_ES, lblEN_SANS, spanish, sanskrit, opcionSelec, indiceSeleccionado);
+            case 0 ->
+                mostrarTexto(lblSANS_ES, lblSANS_EN, spanish, english, opcionSelec, indiceSeleccionado);
+        }
+    }
+
+    private Object getSelectedItemByIndex(int index) {
+        switch (index) {
+            case 1:
+                return cbEspanol.getSelectedItem();
+            case 2:
+                return cbEnglish.getSelectedItem();
+            case 0:
+                return cbSanskrit.getSelectedItem();
+            default:
+                return null;
+        }
+    }
+
+    private Map<Integer, String> getIdiomaMap(int index) {
+        switch (index) {
+            case 1:
+                return spanish;
+            case 2:
+                return english;
+            case 0:
+                return sanskrit;
+            default:
+                return Collections.emptyMap();
+        }
+    }
+
+    private void mostrarTexto(JLabel labelIdioma, JLabel labelOtroIdioma, Map<Integer, String> idioma, Map<Integer, String> otroIdioma, Object opcionSelec, int indiceSeleccionado) {
+        String opcionIdioma = idioma.get(indiceSeleccionado);
+        String opcionOtroIdioma = otroIdioma.get(indiceSeleccionado);
+
+        labelIdioma.setText(esSeleccion(opcionIdioma) ? "..." : opcionIdioma);
+        labelOtroIdioma.setText(esSeleccion(opcionOtroIdioma) ? "..." : opcionOtroIdioma);
+    }
+
+    private boolean esSeleccion(String opcion) {
+        return "Select".equals(opcion) || "Seleccione".equals(opcion);
+    }
+
+    private static int buscarClavePorValor(Map<Integer, String> mapa, Object valorBuscado) {
+        for (Map.Entry<Integer, String> entry : mapa.entrySet()) {
+            // System.out.println("Comparando: " + entry.getValue() + " con " + valorBuscado);
+            if (entry.getValue().equals(valorBuscado)) {
+                return entry.getKey();
+            }
+        }
+        return -1;
+    }
+    
+
+>>>>>>> origin/dev-joel
 }
