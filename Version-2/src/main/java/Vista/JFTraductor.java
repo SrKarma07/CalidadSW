@@ -30,6 +30,9 @@ public class JFTraductor extends javax.swing.JFrame {
 
     private Clip clip;
     private boolean isPlaying = false;
+    //private Map<Integer, String> audioPaths;
+    private String[] audioPaths; // Declaración de la lista de rutas de audio
+
 
     public JFTraductor() {
         setTitle("Yoga Translate");
@@ -50,6 +53,14 @@ public class JFTraductor extends javax.swing.JFrame {
 
         //Cargar el audio
         inicializarSonido();
+
+        // En tu constructor u otro lugar donde cargas las rutas de audio:
+        audioPaths = new String[] {
+                "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav",
+
+                // ... y así sucesivamente
+        };
+        cargarRutasDeAudio(); // Método para cargar las rutas de audio
 
     }
     
@@ -340,6 +351,7 @@ public class JFTraductor extends javax.swing.JFrame {
     private void cbSanskritActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSanskritActionPerformed
         mostrarImagenSeleccionada();
         mostrarTextoSeleccionado();
+        reproducirAudio(); // Método para reproducir el audio
     }//GEN-LAST:event_cbSanskritActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -501,11 +513,29 @@ public class JFTraductor extends javax.swing.JFrame {
             "Parivrtta Janu Sirsasana"
         };
 
+        String[] audioFiles = {
+                "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav",
+                "path2/audio2.wav",
+                // ... y así sucesivamente
+        };
+
         cargarMapaIdioma(english, englishWords);
         cargarMapaIdioma(spanish, spanishWords);
         cargarMapaIdioma(sanskrit, sanskritWords);
+        cargarListaAudio(audioFiles); // Nueva función para cargar rutas de audio
 
     }
+
+    private void cargarListaAudio(String[] audioFiles) {
+        audioPaths = new String[audioFiles.length]; // Inicializar la lista con el tamaño adecuado
+
+        for (int i = 0; i < audioFiles.length; i++) {
+            String rutaCompleta = Paths.get("Version-2", "src", "main", "java", "Sounds", audioFiles[i]).toString();
+            audioPaths[i] = rutaCompleta;
+        }
+    }
+
+
     private void inicializarSonido() {
         try {
             File file = new File("Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav");
@@ -530,11 +560,37 @@ public class JFTraductor extends javax.swing.JFrame {
             }
         });*/
     }
+    private void cargarRutasDeAudio() {
+        // Aquí asigna las rutas de audio a las traducciones
+        //audioPaths.put(1, "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav");
+        //audioPaths.put(1, "ruta_audio_asana_1.wav");
+        // ... y así sucesivamente para cada asana
+    }
+
+    private void reproducirAudio() {
+        int indiceSeleccionado = cbSanskrit.getSelectedIndex();
+        //String rutaAudio = audioPaths.get(indiceSeleccionado);
+
+        // Luego, utiliza la ruta del audio para reproducir el archivo
+        /*
+        try {
+            File file = new File(rutaAudio);
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
+            clip = AudioSystem.getClip();
+            clip.open(audioStream);
+            clip.start();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }*/
+    }
+
     private String obtenerRutaAudio(String traduccionSanskrito) {
         // Construir la ruta del archivo de audio basada en la traducción del Sanscrito
         String audioFileName = traduccionSanskrito.toLowerCase().replaceAll("\\s+", "") + ".wav";
         return Paths.get("Version-2", "src", "main", "java", "Sounds", audioFileName).toString();
     }
+
+
     private void manejarAccionSonido(String accion) {
         switch (accion) {
             case "PLAY":
