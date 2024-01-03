@@ -28,12 +28,6 @@ public class JFTraductor extends javax.swing.JFrame {
     private final Map<Integer, String> sanskrit;
     TraductorSanscrito ts;
 
-    private Clip clip;
-    private boolean isPlaying = false;
-    //private Map<Integer, String> audioPaths;
-    private String[] audioPaths; // Declaración de la lista de rutas de audio
-
-
     public JFTraductor() {
         setTitle("Yoga Translate");
         initComponents();
@@ -51,16 +45,6 @@ public class JFTraductor extends javax.swing.JFrame {
         cargarImagenes();
         mostrarImagenSeleccionada();
 
-        //Cargar el audio
-        inicializarSonido();
-
-        // En tu constructor u otro lugar donde cargas las rutas de audio:
-        audioPaths = new String[] {
-                "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav",
-
-                // ... y así sucesivamente
-        };
-        cargarRutasDeAudio(); // Método para cargar las rutas de audio
 
     }
     
@@ -80,9 +64,6 @@ public class JFTraductor extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator3 = new javax.swing.JSeparator();
         cbSanskrit = new javax.swing.JComboBox<>();
-        jBPlaySpanishInTABSan = new javax.swing.JButton();
-        jBPlayEnglishInTABSan = new javax.swing.JButton();
-        jBPause = new javax.swing.JButton();
         jpEspanol = new javax.swing.JPanel();
         cbEspanol = new javax.swing.JComboBox<>();
         lblImagen = new javax.swing.JLabel();
@@ -162,31 +143,6 @@ public class JFTraductor extends javax.swing.JFrame {
             }
         });
         jpSanskrit.add(cbSanskrit, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 190, -1));
-
-        jBPlaySpanishInTABSan.setText("PLAY");
-        jBPlaySpanishInTABSan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBPlaySpanishInTABSanActionPerformed(evt);
-            }
-        });
-        jpSanskrit.add(jBPlaySpanishInTABSan, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, -1, -1));
-
-        jBPause.setText("PAUSE");
-        jBPause.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBPauseActionPerformed(evt);
-            }
-        });
-        jpSanskrit.add(jBPause, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
-
-        jBPlayEnglishInTABSan.setText("PLAY");
-        jBPlayEnglishInTABSan.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBPlayEnglishInTABSanActionPerformed(evt);
-            }
-        });
-
-        jpSanskrit.add(jBPlayEnglishInTABSan, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, -1, -1));
 
         tabPanel.addTab("Sanskrit", jpSanskrit);
 
@@ -351,7 +307,6 @@ public class JFTraductor extends javax.swing.JFrame {
     private void cbSanskritActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSanskritActionPerformed
         mostrarImagenSeleccionada();
         mostrarTextoSeleccionado();
-        reproducirAudio(); // Método para reproducir el audio
     }//GEN-LAST:event_cbSanskritActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -388,25 +343,10 @@ public class JFTraductor extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_jtaSanscritoKeyTyped
-
-    private void jBPlaySpanishInTABSanActionPerformed(java.awt.event.ActionEvent evt) {
-        playPause();
-    }
-    private void jBPlayEnglishInTABSanActionPerformed(java.awt.event.ActionEvent evt) {
-        playPause();
-    }
-
-    private void jBPauseActionPerformed(java.awt.event.ActionEvent evt) {
-        pause();
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> cbEnglish;
     private javax.swing.JComboBox<String> cbEspanol;
     private javax.swing.JComboBox<String> cbSanskrit;
-    private javax.swing.JButton jBPause;
-    private javax.swing.JButton jBPlaySpanishInTABSan;
-    private javax.swing.JButton jBPlayEnglishInTABSan;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -513,130 +453,11 @@ public class JFTraductor extends javax.swing.JFrame {
             "Parivrtta Janu Sirsasana"
         };
 
-        String[] audioFiles = {
-                "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav",
-                "path2/audio2.wav",
-                // ... y así sucesivamente
-        };
-
         cargarMapaIdioma(english, englishWords);
         cargarMapaIdioma(spanish, spanishWords);
         cargarMapaIdioma(sanskrit, sanskritWords);
-        cargarListaAudio(audioFiles); // Nueva función para cargar rutas de audio
-
     }
 
-    private void cargarListaAudio(String[] audioFiles) {
-        audioPaths = new String[audioFiles.length]; // Inicializar la lista con el tamaño adecuado
-
-        for (int i = 0; i < audioFiles.length; i++) {
-            String rutaCompleta = Paths.get("Version-2", "src", "main", "java", "Sounds", audioFiles[i]).toString();
-            audioPaths[i] = rutaCompleta;
-        }
-    }
-
-
-    private void inicializarSonido() {
-        try {
-            File file = new File("Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav");
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-            clip = AudioSystem.getClip();
-            clip.open(audioStream);
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
-        /*
-        clip.addLineListener(new LineListener() {
-
-            @Override
-            public void update(LineEvent event) {
-                if (event.getType() == LineEvent.Type.STOP) {
-                    // Reproducir de nuevo cuando se detiene (repetición)
-                    if (isPlaying) {
-                        clip.setMicrosecondPosition(0);
-                        clip.start();
-                    }
-                }
-            }
-        });*/
-    }
-    private void cargarRutasDeAudio() {
-        // Aquí asigna las rutas de audio a las traducciones
-        //audioPaths.put(1, "Version-2/src/main/java/Sounds/file_example_WAV_1MG.wav");
-        //audioPaths.put(1, "ruta_audio_asana_1.wav");
-        // ... y así sucesivamente para cada asana
-    }
-
-    private void reproducirAudio() {
-        int indiceSeleccionado = cbSanskrit.getSelectedIndex();
-        //String rutaAudio = audioPaths.get(indiceSeleccionado);
-
-        // Luego, utiliza la ruta del audio para reproducir el archivo
-        /*
-        try {
-            File file = new File(rutaAudio);
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
-            clip = AudioSystem.getClip();
-            clip.open(audioStream);
-            clip.start();
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }*/
-    }
-
-    private String obtenerRutaAudio(String traduccionSanskrito) {
-        // Construir la ruta del archivo de audio basada en la traducción del Sanscrito
-        String audioFileName = traduccionSanskrito.toLowerCase().replaceAll("\\s+", "") + ".wav";
-        return Paths.get("Version-2", "src", "main", "java", "Sounds", audioFileName).toString();
-    }
-
-
-    private void manejarAccionSonido(String accion) {
-        switch (accion) {
-            case "PLAY":
-                if (!isPlaying) {
-                    clip.start();
-                    isPlaying = true;
-                }
-                break;
-            case "PAUSE":
-                if (isPlaying) {
-                    clip.stop();
-                    isPlaying = false;
-                }
-                break;
-            case "RESET":
-                clip.setMicrosecondPosition(0);
-                break;
-            case "STOP":
-                clip.close();
-                isPlaying = false;
-                break;
-            default:
-                System.out.println("Not a valid response");
-        }
-    }
-
-    private void playPause() {
-        if (!isPlaying) {
-            // Reproducir si no está reproduciendo
-            clip.start();
-            isPlaying = true;
-        } else {
-            // Pausar si está reproduciendo
-            clip.setMicrosecondPosition(0); // Reiniciar la posición al inicio
-            clip.start();
-            isPlaying = true;
-        }
-    }
-
-    private void pause() {
-        // Pausar la reproducción
-        if (isPlaying) {
-            clip.stop();
-            isPlaying = false;
-        }
-    }
     private void cargarMapaIdioma(Map<Integer, String> mapa, String[] palabras) {
         for (int i = 0; i < palabras.length; i++) {
             mapa.put(i, palabras[i]);
