@@ -110,7 +110,7 @@ public class JFTraductor extends javax.swing.JFrame {
             }
         });
 
-        jpSanskrit.setBackground(new java.awt.Color(255, 255, 255));
+        jpSanskrit.setBackground(new java.awt.Color(255, 228, 196));
         jpSanskrit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jpSanskrit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -146,7 +146,7 @@ public class JFTraductor extends javax.swing.JFrame {
 
         tabPanel.addTab("Sanskrit", jpSanskrit);
 
-        jpEspanol.setBackground(new java.awt.Color(255, 255, 255));
+        jpEspanol.setBackground(new java.awt.Color(100, 149, 237));
         jpEspanol.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbEspanol.setEditable(true);
@@ -181,7 +181,7 @@ public class JFTraductor extends javax.swing.JFrame {
 
         tabPanel.addTab("Español", jpEspanol);
 
-        jpEnglish.setBackground(new java.awt.Color(255, 255, 255));
+        jpEnglish.setBackground(new java.awt.Color(240, 255, 240));
         jpEnglish.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbEnglish.setEditable(true);
@@ -216,7 +216,7 @@ public class JFTraductor extends javax.swing.JFrame {
 
         tabPanel.addTab("English", jpEnglish);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(216, 191, 216));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
