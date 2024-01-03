@@ -1,5 +1,5 @@
 # Especificación de Casos de Prueba
-
+## Casos Funcionales
 ## Caso de Prueba 1: Verificar la Traducción Correcta
 
 **Descripción:**
@@ -90,4 +90,58 @@ Verificar la validación en la entrada de texto en la pestaña de Diccionario.
 3. Ingresar texto inválido (por ejemplo, números).
 
 **Resultado Esperado:**
-Confirmar que el sistema no deje ingresar caracteres especiales ni números.
+Confirmar que el sistema no deje ingresar caracteres especiales ni números y muestre una alerta.
+
+## Caso de Prueba 8: Validación en el Espacio de Traductor
+
+**Descripción:**
+Verificar la validación en el espacio de traductor cuando se deja vacío.
+
+**Pasos:**
+1. Abrir la aplicación.
+2. Seleccionar la pestaña de Traductor.
+3. Dejar vacío el espacio destinado para ingresar el texto a traducir.
+4. Intentar realizar la traducción.
+
+**Resultado Esperado:**
+Confirmar que el sistema detecta la entrada de texto vacía y muestra una alerta informativa indicando que el campo no puede estar en blanco. Además, verificar que no se realice ninguna traducción en ausencia de texto y que el sistema no genere resultados incorrectos.
+
+## Caso de Prueba 9: Traducción No Encontrada en el Diccionario
+
+**Descripción:**
+Verificar el comportamiento del sistema al intentar traducir una palabra o frase que no está presente en el diccionario proporcionado.
+
+**Pasos:**
+1. Abrir la aplicación.
+2. Seleccionar la pestaña de Traductor.
+3. Dejar vacío el espacio destinado para ingresar el texto a traducir.
+4. Intentar realizar la traducción.
+
+**Resultado Esperado:**
+Confirmar que el sistema detecta que la palabra o frase no está en el diccionario y muestra una alerta informativa indicando que la traducción no puede llevarse a cabo. Verificar que no se generen resultados incorrectos y que el sistema no intente realizar una traducción basada en la información disponible en el diccionario.
+
+## Casos No Funcionales
+
+## Caso de Prueba 10: Rendimiento del Traductor
+
+**Descripción:**
+Evaluar la velocidad de traducción del sistema bajo diferentes condiciones.
+
+**Pasos:**
+1. Ingresar textos cortos, medianos y largos para traducir.
+2. Medir el tiempo de respuesta del sistema para cada traducción.
+
+**Criterios de Aceptación:**
+- El tiempo de respuesta para traducciones de textos debe ser inferior a 1 segundo.
+
+## Caso de Prueba 11: Disponibilidad del Servicio
+
+**Descripción:**
+Verificar la disponibilidad del sistema en diferentes momentos del día.
+
+**Pasos:**
+1. Monitorear la disponibilidad del sistema durante períodos pico y valle.
+2. Registrar cualquier interrupción o tiempo de inactividad.
+
+**Criterios de Aceptación:**
+- El sistema debe estar disponible el 99.9% del tiempo, con un tiempo de inactividad mínimo.

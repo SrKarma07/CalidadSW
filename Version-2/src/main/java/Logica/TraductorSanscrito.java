@@ -20,7 +20,7 @@ public class TraductorSanscrito {
         DICCIONARIO.put("kumbhakasana", "Postura de la Plancha");
         DICCIONARIO.put("malasana", "Postura de la Guirnalda");
         DICCIONARIO.put("matsyasana", "Postura del Pez");
-        DICCIONARIO.put("parivrtta janu Sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
+        DICCIONARIO.put("parivrtta janu sirsasana", "Postura de la Cabeza a la Rodilla Invertida");
         DICCIONARIO.put("parivrtta trikonasana", "Postura del Triángulo Invertido");
         DICCIONARIO.put("paschimottanasana", "Flexión hacia adelante sentado");
         DICCIONARIO.put("setu bandhasana", "Postura del Puente");

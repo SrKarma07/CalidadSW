@@ -216,7 +216,7 @@ public class JFTraductor extends javax.swing.JFrame {
 
         tabPanel.addTab("English", jpEnglish);
 
-        jPanel1.setBackground(new java.awt.Color(216, 191, 216));
+        jPanel1.setBackground(new java.awt.Color(169, 169, 169));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setBackground(new java.awt.Color(255, 255, 255));
